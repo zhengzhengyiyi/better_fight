@@ -1,0 +1,14 @@
+{
+	"required": true,
+	"package": "com.zhengzhengyiyimc.fighting_villager.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"VillagerEntityMixin",
+		"MobEntityMixin",
+		"GhastEntityMixin",
+		"player.SwordAttackMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

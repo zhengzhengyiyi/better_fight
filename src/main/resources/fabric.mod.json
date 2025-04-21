@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "fighting_villager",
+	"version": "${version}",
+	"name": "fighting_villager",
+	"description": "A mod that make villager fight, and you can do better fight",
+	"authors": [
+		"Me!"
+	],
+	"license": "CC0-1.0",
+	"icon": "assets/fighting_villager/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.zhengzhengyiyimc.fighting_villager.Fighting_villager"
+		],
+		"client": [
+			"com.zhengzhengyiyimc.fighting_villager.Fighting_villagerClient"
+		]
+	},
+	"mixins": [
+		"fighting_villager.mixins.json",
+		{
+			"config": "fighting_villager.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.13",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
