@@ -4,6 +4,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Items;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.sound.SoundCategory;
@@ -55,15 +56,15 @@ public class SwordAttackMixin {
                 }
             });
 
-            // world.addParticleClient(
-            //     ParticleTypes.SWEEP_ATTACK,
-            //     player.getX(),
-            //     player.getY() + 1.0,
-            //     player.getZ(),
-            //     0,
-            //     0,
-            //     0
-            // );
+            world.addParticleClient(
+                ParticleTypes.SWEEP_ATTACK,
+                player.getX(),
+                player.getY() + 1.0,
+                player.getZ(),
+                0,
+                0,
+                0
+            );
 
             world.playSound(
                 null,
